@@ -1,6 +1,10 @@
 # Dasdl
 
-**TODO: Add description**
+Downloader for das
+
+## Running
+
+`mix run -e Dasdl.rip`
 
 ## Installation
 
