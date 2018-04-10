@@ -21,8 +21,9 @@ defmodule Dasdl do
         |> Floki.attribute("href")
         |> Enum.map(fn cast_path ->
           title = getTitle cast_path
-          IO.puts "https://www.destroyallsoftware.com/screencasts/catalog/#{title}/download?resolution=1080p"
-          dl("https://www.destroyallsoftware.com/screencasts/catalog/#{title}/download?resolution=1080p", title)
+          cast_url = "https://www.destroyallsoftware.com/screencasts/catalog/#{title}/download?resolution=1080p"
+          IO.puts cast_url
+          dl(cast_url, title)
         end)
       {:ok, %HTTPoison.Response{status_code: 404}} ->
         IO.puts "Not found :("
